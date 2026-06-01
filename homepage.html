@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haiyan Yin | Centre for Frontier AI Research (CFAR), A*STAR</title>
+    <!-- Tailwind CSS for high-fidelity responsive design -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for essential academic & social iconography -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Inter & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar to keep layout premium */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f8fafc;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 3px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+        .pub-highlight {
+            transition: border-color 0.2s ease;
+        }
+        .pub-highlight:hover {
+            border-color: #64748b;
+        }
+    </style>
+</head>
+<body class="bg-[#ffffff] text-slate-800 font-sans antialiased selection:bg-slate-200 selection:text-slate-950">
+
+    <!-- Sticky Navigation Header (Strict Minimalist Border) -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-4xl mx-auto px-6 h-14 flex items-center justify-between text-xs font-mono font-bold">
+            <a href="#about" class="text-slate-950 hover:text-blue-800 transition">HAIYAN YIN</a>
+            <div class="hidden sm:flex items-center space-x-6 text-slate-500">
+                <a href="#about" class="hover:text-slate-950 transition">About</a>
+                <a href="#activity" class="hover:text-slate-950 transition">Recent Activity</a>
+                <a href="#openings" class="hover:text-slate-950 transition text-rose-700">Openings</a>
+                <a href="#publications" class="hover:text-slate-950 transition">Publications</a>
+                <a href="#services" class="hover:text-slate-950 transition">Service</a>
+                <a href="#mentorship" class="hover:text-slate-950 transition">Mentorship</a>
+            </div>
+            <!-- Mobile Menu Indicator (Static Anchor representation) -->
+            <div class="sm:hidden text-slate-400">
+                <a href="#openings" class="text-rose-700">Openings</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Container -->
+    <div class="max-w-4xl mx-auto px-6 py-12 lg:py-20 space-y-20">
+
+        <!-- HEADER SECTION: Profile Details & Core Links -->
+        <header class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-10 border-b border-slate-200 items-start">
+            
+            <div class="md:col-span-3 space-y-4">
+                <h1 class="text-3xl font-extrabold text-slate-950 tracking-tight">Dr. Haiyan Yin</h1>
+                <p class="text-base font-semibold text-slate-900">Early Career Principal Investigator</p>
+                <p class="text-sm text-slate-500 font-medium">A*STAR Centre for Frontier AI Research (CFAR), Singapore</p>
+                
+                <!-- Instant Multi-Stakeholder Keywords (3-Second Scan) -->
+                <div class="font-mono text-xs text-slate-500 space-y-1.5 pt-2">
+                    <div>
+                        <span class="text-slate-900 font-bold">Research Areas:</span> 
+                        LLM Agents & Autonomous Workflows • Reinforcement Learning • Trustworthy AI & Verifiable Control • Continual & Meta-Learning
+                    </div>
+                </div>
+
+                <!-- Pure-text Lineage Link Bar (Chris Lu & LAMDA Style) -->
+                <div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs font-mono font-bold pt-4 text-slate-900">
+                    <span><i class="fa-regular fa-envelope mr-1"></i> yinhaiyan@outlook.com / yin_haiyan@a-star.edu.sg </span>
+                    <span class="text-slate-300">|</span>
+                    <a href="https://scholar.google.com/citations?user=xy6_gBUAAAAJ&hl=en" target="_blank" class="hover:text-blue-800 hover:underline"><i class="fa-solid fa-graduation-cap mr-1"></i> Google Scholar</a>
+                    <span class="text-slate-300">|</span>
+                    <a href="https://www.linkedin.com/in/haiyan-yin-3b166664/" target="_blank" class="hover:text-blue-800 hover:underline"><i class="fa-brands fa-linkedin mr-1"></i> LinkedIn</a>
+                </div>
+            </div>
+
+            <!-- Clean, Structured Circular Portrait Slot -->
+            <div class="flex justify-start md:justify-end">
+                <div class="w-40 h-40 rounded-full overflow-hidden border border-slate-200 shadow-inner">
+                    <img
+                        src="figures/profile-v2.jpg"
+                        alt="Haiyan Yin"
+                        class="w-full h-full object-cover"
+                    />
+                </div>
+            </div>
+            
+        </header>
+
+        <!-- About Section -->
+        <section id="about" class="space-y-4">
+            <h2 class="text-xs font-mono font-extrabold uppercase tracking-widest text-slate-950">About Me</h2>
+            <div class="text-sm text-slate-700 leading-relaxed space-y-4">
+                <p>
+                    I am an Early Career Principal Investigator (PI) at the 
+                    <a href="https://www.a-star.edu.sg/cfar/home" class="text-blue-800 hover:underline font-semibold">Centre for Frontier AI Research (CFAR), A*STAR</a>working with <a href="https://www.a-star.edu.sg/cfar/about-cfar/management/prof-ivor-tsang" class="text-blue-800 hover:underline font-semibold">Prof. Ivor Tsang</a>.
+                    My research bridges sequential decision-making and language model reasoning to develop scalable, verifiable, and self-evolving agents capable of long-horizon reasoning, autonomous adaptation, and reliable execution in the open world.
+                </p>
+                <p>
+                    Before joining A*STAR, I was a Research Scientist at <strong>Sea AI Lab (SAIL)</strong> and previously worked at <strong>Baidu Research USA</strong> in Seattle.    
+                    I obtained both my Ph.D. and B.Eng. degrees from the College of <a href="https://www.ntu.edu.sg/computing" class="text-blue-800 hover:underline font-semibold">Computing and Data Science (CCDS), Nanyang Technological University (NTU)</a> where I was fortunate to be advised by <a href="https://www.cse.cuhk.edu.hk/~sinnopan/" class="text-blue-800 hover:underline font-semibold">Prof. Sinno Jialin Pan</a>.
+                </p>
+            </div>
+        </section>
+
+        <!-- SECTION 2: Recent Activity (Structured Chronology, Avoiding "News" Label to prevent overlap) -->
+        <section id="activity" class="space-y-4">
+            <h2 class="text-xs font-mono font-extrabold uppercase tracking-widest text-slate-950">Recent Activity</h2>
+            <div class="font-mono text-xs text-slate-700 space-y-3 pl-4 border-l-2 border-slate-200">
+                <div class="space-y-1">
+                    <span class="text-slate-400 font-bold">[May 2026]</span>
+                    <p class="text-slate-900 font-semibold leading-relaxed">
+                        Delivered a Keynote Speech at the <span class="text-blue-800">VALSE 2026 Workshop on Neural Symbolic AI</span> on "From Reactive Reasoning to Verifiable Control: Pathway to Neuro-Symbolic Autonomous Agents".
+                    </p>
+                </div>
+                <div class="space-y-1">
+                    <span class="text-slate-400 font-bold">[May 2026]</span>
+                    <p class="text-slate-900 leading-relaxed">
+                        Recognized as an
+                        <span class="text-amber-600 font-semibold">🏆 ICML 2026 Gold Reviewer</span>
+                        for exceptional reviewing contributions.
+                    </p>
+                </div>
+                <div class="space-y-1">
+                    <span class="text-slate-400 font-bold">[May 2026]</span>
+                    <p class="text-slate-900 leading-relaxed">
+                        Two papers on
+                        <span class="italic text-slate-700">
+                            causality-inspired physical reasoning in vision-language models
+                        </span>
+                        and
+                        <span class="italic text-slate-700">
+                            skill refinement for long-horizon web agents
+                        </span>
+                        have been accepted to
+                        <span class="text-blue-800 font-bold">KDD 2026</span>.
+                    </p>
+                </div>
+                <div class="space-y-1">
+                    <span class="text-slate-400 font-bold">[Apr 2026]</span>
+                    <p class="text-slate-900 leading-relaxed">
+                        <span class="text-slate-950 font-bold">Two papers</span> on
+                        <span class="text-slate-700">neural-symbolic skill learning for autonomous web agents</span>
+                        and
+                        <span class="text-slate-700">evolutionary counterfactual reasoning for multi-agent planning</span>
+                        have been accepted for presentation at
+                        <span class="text-blue-800 font-bold">ICML 2026</span>
+                        (Seoul, South Korea). I will be attending the conference in person.
+                    </p>
+                </div>
+                <div class="space-y-1">
+                    <span class="text-slate-400 font-bold">[Jan 2026]</span>
+                    <p class="text-slate-900 leading-relaxed">
+                        <span class="text-slate-950 font-bold">Four papers</span>
+                        have been accepted to
+                        <span class="text-blue-800 font-bold">ICLR 2026</span>.
+                    </p>
+                </div>
+                <div class="space-y-1">
+                    <span class="text-slate-400 font-bold">[Jan 2026]</span>
+                    <p class="text-slate-900 font-semibold leading-relaxed">
+                        Serving as the <span class="text-blue-800">Leading Organizer</span> for the
+                        <a href="https://trustagenticai.github.io/AAAI2026/" class="text-slate-950 underline decoration-indigo-500 hover:text-blue-800 transition-colors">
+                            AAAI 2026 Workshop on Trust and Control of Agentic AI
+                        </a>.
+                    </p>
+                </div>
+                <div class="space-y-1">
+                    <span class="text-slate-400 font-bold">[Jan 2026]</span>
+                    <p class="text-slate-900 leading-relaxed">
+                        Received the <span class="text-slate-950 font-bold">A*STAR CDF Best Presentation Award</span> (with SGD $1,500 travel grant).
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: Open Opportunities (Hiring Focus) -->
+        <section id="openings" class="space-y-4">
+            <h2 class="text-xs font-mono font-extrabold uppercase tracking-widest text-slate-950">Openings</h2>
+            <div class="p-6 bg-slate-50 border border-slate-200 rounded-sm space-y-4">
+                <div class="flex items-center gap-2 text-rose-700">
+                    <span class="w-1.5 h-1.5 rounded-full bg-rose-600 animate-pulse"></span>
+                    <span class="text-xs font-mono font-extrabold tracking-wider uppercase">Active Recruitment & Supervision</span>
+                </div>
+                <h3 class="text-sm font-bold text-slate-900">[📢Opportunities] Research Interns (Remote/On-site), Visiting Scholars, & Postdocs</h3>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                    We are actively looking for highly motivated minds to work on high-impact publications. We prioritize candidates with outstanding programming skills and academic drive.
+                </p>
+                
+                <div class="space-y-3 pt-2">
+                    <span class="text-xs font-mono font-bold text-slate-800 uppercase block">Selected Working Topics:</span>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2 text-xs text-slate-600 font-medium">
+                        <div class="flex items-start gap-2">
+                            <span class="text-slate-400 font-mono">•</span>
+                            <span><strong>Trustworthy Agentic AI & Verification:</strong> Neural-symbolic tracing, logical grounding, agent verification.</span>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <span class="text-slate-400 font-mono">•</span>
+                            <span><strong>Self-Evolving Systems & Skill Recovery:</strong> Memory-guided planning, failure tracing and automated repair.</span>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <span class="text-slate-400 font-mono">•</span>
+                            <span><strong>Reinforcement Learning:</strong> Post trainning & tool calling, embodied policy learning and continual RL.</span>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <span class="text-slate-400 font-mono">•</span>
+                            <span><span><strong>AI4Science:</strong> Programmatic LLM agents for physics-driven catalysis and complex chemical surface discovery.</span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-[11px] text-slate-500 font-mono pt-2 border-t border-slate-200/60">
+                    <strong>Submission Guide:</strong> Interested candidates (e.g., visiting scholars, local/overseas master studnets, junior researchers) please email your CV, publication list/drafts, and target research statement directly to <a href="mailto:yinhaiyan@outlook.com" class="text-blue-800 underline">yinhaiyan@outlook.com</a>.
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: Publications (Clean LAMDA Style, Filterable) -->
+        <section id="publications" class="space-y-6">
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 border-b border-slate-200 pb-3">
+                <h2 class="text-xs font-mono font-extrabold uppercase tracking-widest text-slate-950">Publications</h2>
+                
+                <!-- Pure-text Google Scholar link and index description -->
+                <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-[11px] font-mono text-slate-500" id="pub-filters">
+                    <a href="https://scholar.google.com/citations?user=xy6_gBUAAAAJ&hl=en" target="_blank" class="text-slate-950 hover:text-blue-800 transition font-bold">
+                        Show All on Google Scholar <i class="fa-solid fa-arrow-up-right-from-square text-[9px] ml-0.5"></i>
+                    </a>
+                    <span class="text-slate-300">|</span>
+                    <span class="text-slate-400 font-medium">(* joint first author, <sup>†</sup> corresponding author)</span>
+                </div>
+            </div>
+
+            <!-- Publications Loop -->
+            <div class="space-y-8" id="publications-container">
+
+                <!-- Paper Item 1 -->
+                <div class="pub-block space-y-2 pub-highlight border-l-2 border-transparent pl-4" data-selected="true" data-agentic="false" data-neurosymbolic="true">
+                    <div class="flex items-center gap-2 text-[10px] font-mono">
+                        <span class="font-extrabold text-slate-900 uppercase">ICML 2026</span>
+                    </div>
+                    <p class="text-sm font-bold text-slate-950 leading-snug">
+                        Lifting Traces to Logic: Programmatic Skill Induction with Neuro-Symbolic Learning for Long-Horizon Agentic Tasks
+                    </p>
+                    <p class="text-xs text-slate-600 font-medium">
+                        Jie-Jing Shao, <span class="underline font-semibold text-slate-900">Haiyan Yin</span><sup>†</sup>, Yueming Lyu, Xingrui Yu, Lan-Zhe Guo, Ivor Tsang, James Kwok, Yu-Feng Li<sup>†</sup>.
+                    </p>
+                    <div class="flex items-center gap-3 text-xs font-mono pt-1">
+                        <a href="https://arxiv.org/pdf/2605.01293" class="text-blue-800 hover:underline">[Paper]</a>
+                        <a href="https://sh-jj.github.io/NSI" class="text-blue-800 hover:underline">[Code Base]</a>
+                    </div>
+                    <div class="text-[11px] font-mono text-slate-400">
+                        Programmatic Skill Induction • Neuro-Symbolic Control • Agentic Workflow
+                    </div>
+                </div>
+
+                <!-- Paper Item 2 -->
+                <div class="pub-block space-y-2 pub-highlight border-l-2 border-transparent pl-4" data-selected="true" data-agentic="true" data-neurosymbolic="false">
+                    <div class="flex items-center gap-2 text-[10px] font-mono">
+                        <span class="font-extrabold text-slate-900 uppercase">ICML 2026</span>
+                    </div>
+                    <p class="text-sm font-bold text-slate-950 leading-snug">
+                        EvoCF: Multi-agent Collaboration with Memory-guided Evolutionary Counterfactual Planning
+                    </p>
+                    <p class="text-xs text-slate-600 font-medium">
+                        Haotian Chi, Zeyu Feng, Xingrui Yu, Linbo Luo, Yew-Soon Ong, Ivor Tsang, Hechang Chen<sup>†</sup>, Yi Chang<sup>†</sup>, <span class="underline font-semibold text-slate-900">Haiyan Yin</span><sup>†</sup>.
+                    </p>
+                    <div class="flex items-center gap-3 text-xs font-mono pt-1">
+                        <a href="https://openreview.net/pdf?id=zGKkewtb2w" class="text-blue-800 hover:underline">[Paper]</a>
+                    </div>
+                    <div class="text-[11px] font-mono text-slate-400">
+                        Multi-Agent Planning • Evolutionary Programming • Counterfactual Reasoning • Agentic Memory
+                    </div>
+                </div>
+                
+                <div class="pub-block space-y-2 pub-highlight border-l-2 border-transparent pl-4" data-selected="true" data-agentic="true" data-neurosymbolic="false">
+                    <div class="flex items-center gap-2 text-[10px] font-mono">
+                        <span class="font-extrabold text-slate-900 uppercase">KDD 2026</span>
+                    </div>
+
+                    <p class="text-sm font-bold text-slate-950 leading-snug">
+                        SkillTracer: Structural Failure Attribution and Refinement of Agentic Skills in Long-Horizon Web Tasks
+                    </p>
+
+                    <p class="text-xs text-slate-600 font-medium">
+                        Yuyang Li<sup>*</sup>, Yiran Dou<sup>*</sup>, Jie-Jing Shao, Yueming Lyu, Ivor Tsang,
+                        <span class="underline font-semibold text-slate-900">Haiyan Yin</span><sup>†</sup>.
+                    </p>
+
+                    <div class="flex items-center gap-3 text-xs font-mono pt-1">
+                        <a href="https://openreview.net/pdf?id=OiyEjThGeZ" class="text-blue-800 hover:underline">[Paper]</a>
+                        <a href="https://liyuuuuy.github.io/SkillTracer/" class="text-blue-800 hover:underline">[Project Page]</a>
+                    </div>
+
+                    <div class="text-[11px] font-mono text-slate-400">
+                        Agentic Skill Refinement • Failure Attribution • Long-Horizon Web Agents
+                    </div>
+                </div>
+                
+                <div class="pub-block space-y-2 pub-highlight border-l-2 border-transparent pl-4" data-selected="true" data-agentic="false" data-neurosymbolic="false">
+                <div class="flex items-center gap-2 text-[10px] font-mono">
+                    <span class="font-extrabold text-slate-900 uppercase">KDD 2026</span>
+                </div>
+
+                <p class="text-sm font-bold text-slate-950 leading-snug">
+                    Causal Scaffolding for Physical Reasoning: A Benchmark for Causally-Informed Physical World Understanding in VLMs
+                </p>
+
+                <p class="text-xs text-slate-600 font-medium">
+                    Tianyi Tang,
+                    Zhuoyi Lin<sup>†</sup>,
+                    Zeyu Feng,
+                    Tianyi Ma,
+                    Yew-Soon Ong,
+                    Ivor Tsang,
+                    <span class="underline font-semibold text-slate-900">Haiyan Yin</span><sup>†</sup>.
+                </p>
+
+                <div class="flex items-center gap-3 text-xs font-mono pt-1">
+                    <a href="#" class="text-blue-800 hover:underline">[Paper]</a>
+                    <a href="https://github.com/haorentang/CausalPhys" class="text-blue-800 hover:underline">[Benchmark]</a>
+                </div>
+
+                <div class="text-[11px] font-mono text-slate-400">
+                    Physical World Understanding • Causal Reasoning • Vision-Language Models
+                </div>
+            </div>
+
+
+                <!-- Paper Item 3 -->
+                <div class="pub-block space-y-2 pub-highlight border-l-2 border-transparent pl-4" data-selected="true" data-agentic="true" data-neurosymbolic="false">
+                    <div class="flex items-center gap-2 text-[10px] font-mono">
+                        <span class="font-extrabold text-slate-900 uppercase">ICLR 2026</span>
+                    </div>
+                    <p class="text-sm font-bold text-slate-950 leading-snug">
+                        FlowSearcher: Synthesizing Memory-Guided Agentic Workflows for Web Information Seeking
+                    </p>
+                    <p class="text-xs text-slate-600 font-medium">
+                        Keyi Xiang, Zeyu Feng, Zhuoyi Lin<sup>†</sup>, Yueming Lyu, Shi Boyuan, Yew-Soon Ong, Ivor Tsang, <span class="underline font-semibold text-slate-900">Haiyan Yin</span><sup>†</sup>.
+                    </p>
+                    <div class="flex items-center gap-3 text-xs font-mono pt-1">
+                        <a href="https://openreview.net/pdf?id=34v7DVz2l0" class="text-blue-800 hover:underline">[Paper]</a>
+                    </div>
+                    <div class="text-[11px] font-mono text-slate-400">
+                        Agentic Workflows • Deep Research • Multi-level Memory
+                    </div>
+                </div>
+
+                <!-- Paper Item 5 -->
+                <div class="pub-block space-y-2 pub-highlight border-l-2 border-transparent pl-4" data-selected="true" data-agentic="false" data-neurosymbolic="false">
+                    <div class="flex items-center gap-2 text-[10px] font-mono">
+                        <span class="font-extrabold text-slate-900 uppercase">ICLR 2026</span>
+                    </div>
+
+                    <p class="text-sm font-bold text-slate-950 leading-snug">
+                        Masked Skill Token Training for Hierarchical Off-Dynamics Transfer
+                    </p>
+
+                    <p class="text-xs text-slate-600 font-medium">
+                        Zeyu Feng,
+                        <span class="underline font-semibold text-slate-900">Haiyan Yin</span>,
+                        Yew-Soon Ong,
+                        Harold Soh.
+                    </p>
+
+                    <div class="flex items-center gap-3 text-xs font-mono pt-1">
+                        <a href="https://openreview.net/pdf?id=K4ngUOra9m" class="text-blue-800 hover:underline">[Paper]</a>
+                    </div>
+
+                    <div class="text-[11px] font-mono text-slate-400">
+                        Hierarchical Reinforcement Learning • Diffusion Models • Off-Dynamics Generalization
+                    </div>
+                </div>
+
+
+                <!-- Paper Item 5 -->
+                <div class="pub-block space-y-2 pub-highlight border-l-2 border-transparent pl-4" data-selected="true" data-agentic="false" data-neurosymbolic="true">
+                    <div class="flex items-center gap-2 text-[10px] font-mono">
+                        <span class="font-extrabold text-slate-900 uppercase">ICLR 2026</span>
+                    </div>
+                    <p class="text-sm font-bold text-slate-950 leading-snug">
+                        Verification and Co-Alignment via Heterogeneous Consistency for Preference-Aligned LLM Annotations
+                    </p>
+                    <p class="text-xs text-slate-600 font-medium">
+                        Chen Cheng, <span class="underline font-semibold text-slate-900">Haiyan Yin</span>, Ivor Tsang.
+                    </p>
+                    <div class="flex items-center gap-3 text-xs font-mono pt-1">
+                        <a href="#" class="text-blue-800 hover:underline">[Paper]</a>
+                    </div>
+                    <div class="text-[11px] font-mono text-slate-400">
+                        Consistency Verification • LLM Preference Alignment
+                    </div>
+                </div>
+
+
+                <!-- Paper Item 4 -->
+                <div class="pub-block space-y-2 pub-highlight border-l-2 border-transparent pl-4" data-selected="true" data-agentic="true" data-neurosymbolic="false">
+                    <div class="flex items-center gap-2 text-[10px] font-mono">
+                        <span class="font-extrabold text-slate-900 uppercase">NeurIPS 2025</span>
+                    </div>
+                    <p class="text-sm font-bold text-slate-950 leading-snug">
+                        Instruct Flow: Adaptive Symbolic Constraint-Guided Code Generation for Long-Horizon Planning
+                    </p>
+                    <p class="text-xs text-slate-600 font-medium">
+                        Chi Haotian, Zeyu Feng, Lyu Yueming, Zheng Chengqi, Luo Linbo, Ong Yew-Soon, Ivor Tsang, Hechang Chen<sup>†</sup>, Chang Yi<sup>†</sup>, <span class="underline font-semibold text-slate-900">Haiyan Yin</span><sup>†</sup>.
+                    </p>
+                    <div class="flex items-center gap-3 text-xs font-mono pt-1">
+                        <a href="https://openreview.net/pdf?id=nzwjvpCO4F" class="text-blue-800 hover:underline">[Paper]</a>
+                        <a href="https://github.com/chiht21/InstructFlow" class="text-blue-800 hover:underline">[Code]</a>
+
+                    </div>
+                    <div class="text-[11px] font-mono text-slate-400">
+                        Code Generation • Symbolic Constraint Induction • Robotic Manipulation • Embodied Planning
+                    </div>
+                </div>
+
+
+                <!-- Peer Reviewed Academic Workshops Segment -->
+                <div class="pt-6 border-t border-slate-200 space-y-4">
+                    <h3 class="text-xs font-mono font-bold text-slate-400 uppercase tracking-widest">Selected Workshop Papers</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4 text-xs">
+                        
+                        <div class="space-y-1.5">
+                            <span class="font-mono text-[10px] font-bold text-slate-400 uppercase">[ICLR '26 AIWILD]</span>
+                            <h4 class="font-bold text-slate-900">NesyProAct: Proactive Neural-Symbolic Control for Web Agents</h4>
+                            <p class="text-slate-500 font-medium">Tianyi Tang, Keyi Xiang, Jie-Jing Shao, Yueming Lyu, Ivor Tsang, Yew-Soon Ong, <span class="underline">Haiyan Yin</span><sup>†</sup>.</p>
+                        </div>
+
+                        <div class="space-y-1.5">
+                            <span class="font-mono text-[10px] font-bold text-slate-400 uppercase">[ICLR '26 VerifAI2]</span>
+                            <h4 class="font-bold text-slate-900">Grounding Long-Horizon Multi-Agent Planning in GUI Environments with Shared Contract-based DAGs</h4>
+                            <p class="text-slate-500 font-medium">Hao Yu, Weiming Li, Yueming Lyu, Jie-Jing Shao, Yulei Sui, Ivor Tsang, <span class="underline">Haiyan Yin</span><sup>†</sup>.</p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION 5: Professional Services & Honors -->
+        <section id="services" class="space-y-6">
+            <h2 class="text-xs font-mono font-extrabold uppercase tracking-widest text-slate-950">Professional Service & Rewards</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm leading-relaxed">
+                
+                <div class="space-y-3">
+                    <h3 class="text-xs font-mono font-bold text-slate-400 uppercase">Organizing Roles</h3>
+                    <ul class="list-disc list-inside space-y-2 text-slate-700 font-medium">
+                        <li><strong>Leading Organizer</strong>, AAAI 2026 Workshop on Trust and Control of Agentic AI.</li>
+                        <li><strong>Organizing Committee</strong>, A*STAR-NVIDIA Joint Workshop on Agentic GenAI (2025).</li>
+                        <li><strong>Workflow Chair</strong>, IEEE Conference on Artificial Intelligence (CAI) (2024).</li>
+                    </ul>
+                </div>
+
+                <div class="space-y-3">
+                    <h3 class="text-xs font-mono font-bold text-slate-400 uppercase">Reviewing & Honors</h3>
+                    <ul class="list-disc list-inside space-y-2 text-slate-700 font-medium">
+                         <li><strong>🏆 Gold Reviewer</strong>, ICML 2026.</li>
+                        <li><strong>🏆 Highlighted Reviewer</strong>, ICLR 2022.</li>
+                        <li><strong>🇸🇬 SG100 Woman in Tech</strong> (2025).</li>
+                        <li><strong>Reviewer</strong> for NeurIPS, ICML, ICLR, KDD, AAAI, IJCAI, TPAMI, TMLR, etc</li>
+                        <li><strong>A*STAR CDF Best Presentation Award</strong> (2025).</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION 6: Mentorship & Lab Supervision Structure (Fair, structured, and comprehensive list) -->
+        <section id="mentorship" class="space-y-4">
+            <h2 class="text-xs font-mono font-extrabold uppercase tracking-widest text-slate-950">Supervisions & Joint Work</h2>
+            <p class="text-sm text-slate-700 leading-relaxed">
+                I prioritize rigorous mentorship and strive to cultivate an open research environment where curiosity, intellectual independence, and bold ideas can thrive. 
+            </p>
+            
+            <div class="pt-2 text-xs font-mono text-slate-600">
+                <span class="text-slate-900 font-bold uppercase block pb-3">Active Student Co-authors & Intern Placement:</span>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <ul class="space-y-2">
+                        <li>• <strong class="text-slate-950">Li Shenggui</strong> (Ph.D. Candidate @ NTU) — Scaling & video generation inference.</li>
+                        <li>• <strong class="text-slate-950">Jie-Jing Shao</strong> (Visiting Scholar @ LAMDA, Nanjing University) — Programmatic skill induction & LLM Agents.</li>
+                        <li>• <strong class="text-slate-950">Li Yuyang</strong> (Master Intern @ NUS) — Long-horizon agentic control & harness engineering.</li>
+                    </ul>
+                    <ul class="space-y-2">
+                        <li>• <strong class="text-slate-950">Haotian Chi</strong> (Intern @ JLU) — Multi-agent counterfactual planning & code generation.</li>
+                        <li>• <strong class="text-slate-950">Tang Tianyi</strong> (Master Intern @ NTU) — Agentgic memory & physics-driven agentic control.</li>
+                        <li>• <strong class="text-slate-950">Keyi Xiang</strong> (Master Intern @ NTU) — Agentic workflow optimization & deep research.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Strictly Academic Clean Footer -->
+    <footer class="bg-slate-50 border-t border-slate-200 py-12 text-center text-xs text-slate-400 font-mono">
+        <p>© 2026 Dr. Haiyan Yin. Center for Frontier AI Research (CFAR), A*STAR.</p>
+    </footer>
+
+</body>
+</html>
